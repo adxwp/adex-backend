@@ -132,5 +132,4 @@ dist
 # Http client
 client.http
 .vscode/settings.json
-client/category.http
-client/product.http
+client/*
