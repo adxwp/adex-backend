@@ -17,7 +17,7 @@ const findAll = async (req: Request, res: Response) => {
 // Finds a single category by its _id
 const findById = async (req: Request, res: Response) => {
     const { id } = req.params
-    const item = await Order.findById(id)
+    const item = await Order.findById(id).populate('order_lines')
     res.send(item)
 }
 

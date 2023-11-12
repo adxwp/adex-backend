@@ -61,7 +61,7 @@ const OrderSchema = new Schema({
    },
   tax: { type: Number, default: 0 },
   total_amount: { type: Number, required: true },
-  items: [
+  order_lines: [
     { type: Types.ObjectId, ref: 'OrderLines'}
   ]
 }, { timestamps: true });
@@ -75,7 +75,7 @@ const Order = model('Order', OrderSchema);
 // 2. Create a Schema corresponding to the document interface.
 const OrderLinesSchema = new Schema({
   order_id: { type: Types.ObjectId, ref: 'Order' },
-  product_id: { type: Types.ObjectId, ref: 'Product' },
+//   product_id: { type: Types.ObjectId, ref: 'Product' },
   quantity: { type: Number, required: true },
   list_price: { type: Number, required: true },
   discount: { type: Number },
