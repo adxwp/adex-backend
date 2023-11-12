@@ -131,3 +131,4 @@ dist
 
 # Http client
 client.http
+.vscode/settings.json
